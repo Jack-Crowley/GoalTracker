@@ -62,3 +62,11 @@ ul#nav-mobile {
     margin:0;
     padding:0;
 }
+
+.carousel {
+    height: 900px !important;
+}
+
+.carousel-fixed-item {
+    margin-left: 200px;
+}

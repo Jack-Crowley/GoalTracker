@@ -36,7 +36,7 @@
                             style="font-size: 25px; font-weight: bold;">folder</i></span></a>
                 <a href="#!" class="white-text 4"><span><i class="material-icons red-text small folder-object4"
                             style="font-size: 25px; font-weight: bold;">folder</i></span></a>
-                <a href="#!" class="white-text 5"><span><i class="material-icons grey-text small folder-object5"
+                <a href="#NewFolder" class="white-text 5 modal-trigger"><span><i class="material-icons grey-text small folder-object5"
                             style="font-size: 25px; font-weight: bold;">add</i></span></a>
             </div>
             </li>
@@ -101,7 +101,7 @@
                 </div>
             </div>
         </a>
-        <a href="">
+        <a href="#NewFolder" class="modal-trigger">
             <div class="card">
                 <div class="card-image">
                     <img src="Images/newfolder.png" height="300px">
@@ -115,12 +115,46 @@
     </div>
     </div>
 
+    <div class="modal" id="NewFolder">
+        <div class="modal-content">
+            <h4 class="center">Create New Folder</h4>
+            <form>
+                <div class="row">
+                    <div class="input-field col s6 item-name">
+                        <label for="name">Folder Name:</label>
+                        <input type="text" name="name" required>
+                    </div>
+                    <div class="file-field input-field s6">
+                        <div class="btn blue">
+                          <span>File</span>
+                          <input type="file">
+                        </div>
+                        <div class="file-path-wrapper">
+                          <input class="file-path validate" type="text" placeholder="Folder Thumbnail">
+                        </div> 
+                      </div>
+                    <div class="input-field col s12 item-name">
+                        <label for="description">Description:</label>
+                        <input type="text" name="description" required>
+                    </div>
+                <div class="modal-footer">
+                    <button class="btn-small green" type="submit">Save</button>
+
+                    <a href="#!" class="modal-close red btn-small">Cancel</a>
+                </div>
+            </form>
+        </div>
+
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
         M.AutoInit();
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
     </script>
-    <script src="home.js"></script>
+    <script src="Scripts/home.js"></script>
 </body>
 
 </html>

@@ -25,7 +25,15 @@
         </div>
     </nav>
 
-    <img src="Images/goal.jpg" alt="">
+    <div class="carousel carousel-slider" data-indicators="true">
+        <div class="carousel-fixed-item">
+            <a class="btn-large waves-effect white-text black join-button">Join Now</a>
+        </div>
+        <a href="#one!" class="carousel-item"><img src="Images/homepag.png" alt=""></a>
+        <a href="#two!" class="carousel-item"><img src="Images/goal.png" alt=""></a>
+        <a href="#three!" class="carousel-item"><img src="Images/homepag.png" alt=""></a>
+        <a href="#four!" class="carousel-item"><img src="Images/goal.png" alt=""></a>
+    </div>
 
     <footer class="page-footer blue">
         <ul>
@@ -33,13 +41,25 @@
                 <h5>Made by Jack Crowley</h5>
             </li>
             <li class="footer">
-                <a href="https://github.com/Jack-Crowley"><img src="Images/git_logo.png" alt="" width="50" class="right navbar-icon" class="footer-img" /></a>
+                <a href="https://github.com/Jack-Crowley"><img src="Images/git_logo.png" alt="" width="50"
+                        class="right navbar-icon" class="footer-img" /></a>
             </li>
         </ul>
     </footer>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script> M.AutoInit();</script>
+    <script>
+      M.AutoInit();
+      setInterval(() => {
+          $('.carousel').carousel('next');
+
+      }, 2000)
+      $('a.join-button').on('click', () => {
+          window.location.href = 'home.html'
+      })
+    </script>
+
 </body>
 
 </html>
