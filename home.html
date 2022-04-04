@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="Styles/homepage.css" />
+    <link rel="stylesheet" href="Styles/sidebar.css">
+    <title>Home Page</title>
+</head>
+
+<body style="margin-left: 100px;" class="grey">
+    <!-- style="width:120px; margin-top:65px;" -->
+    <ul id="slide-out" class="sidenav grey darken-4 sidebar-fixed" style="width: 100px">
+        <li class="sidenav-object no-padding expander expand">
+            <a href="#!" class="white-text" style="margin-bottom: 10px"><span></span><i
+                    class="material-icons white-text small">arrow_forward</i></a>
+        </li>
+        <li class="sidenav-object no-padding dashboard">
+            <a href="#!" class="white-text"><span></span><i class="material-icons white-text small">apps</i></a>
+        </li>
+        <ul class="collapsible grey darken-4 sidebar-fixed"">
+            <li class=" folder">
+            <div class="collapsible-header">
+                <a href="#!" class="white-text"><i class="material-icons white-text small">folder</i><span></span></a>
+            </div>
+            <div class="collapsible-body grey darken-4">
+                <a href="#!" class="white-text 1"><span><i class="material-icons red-text folder-object1"
+                            style="font-size: 25px; font-weight: bold;">folder</i></span></a>
+                <a href="#!" class="white-text 2"><span><i class="material-icons green-text small folder-object2"
+                            style="font-size: 25px; font-weight: bold;">folder</i></span></a>
+                <a href="#!" class="white-text 3"><span><i class="material-icons yellow-text small folder-object3"
+                            style="font-size: 25px; font-weight: bold;">folder</i></span></a>
+                <a href="#!" class="white-text 4"><span><i class="material-icons red-text small folder-object4"
+                            style="font-size: 25px; font-weight: bold;">folder</i></span></a>
+                <a href="#!" class="white-text 5"><span><i class="material-icons grey-text small folder-object5"
+                            style="font-size: 25px; font-weight: bold;">add</i></span></a>
+            </div>
+            </li>
+        </ul>
+        <li class="sidenav-object no-padding profile">
+            <a href="#!" class="white-text"><span></span><i
+                    class="material-icons white-text small">person_outline</i></a>
+        </li>
+        <li class="sidenav-object no-padding settings">
+            <a href="#!" class="white-text"><span></span><i class="material-icons white-text small">settings</i></a>
+        </li>
+    </ul>
+    <!-- <a href="#" data-target="slide-out" class="sidenav-trigger left red"><i class="material-icons large">menu</i></a> -->
+
+    <h3 class="center">&ltUser Name&gt's Dashboard </h3>
+
+    <div class="row">
+        <div class="col s1"></div>
+        <div class="col s10 grey lighten-2 folders col1">
+            <h3 class="center">Folders</h3>
+            <a href="folderpage.html">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Images/red.jpg" height="300px">
+                        <span class="card-title red-text">Red</span>
+                    </div>
+                    <div class="card-content">
+                        <p>My red goals from 2019-2022</p>
+                    </div>
+                </div>
+            </a>
+            <a href="folderpage.html">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="Images/green.jpg" height="300px">
+                        <span class="card-title blue-text">BLUE</span>
+                    </div>
+                    <div class="card-content">
+                        <p>My Colorblind mother made this folder when she snuck onto my account</p>
+                    </div>
+            </a>
+        </div>
+        <a href="folderpage.html">
+            <div class="card">
+                <div class="card-image">
+                    <img src="Images/yellow.jpg" height="300px">
+                    <span class="card-title yellow-text">Yellow</span>
+                </div>
+                <div class="card-content">
+                    <p>I love the color yellow</p>
+                </div>
+            </div>
+        </a>
+        <a href="folderpage.html">
+            <div class="card">
+                <div class="card-image">
+                    <img src="Images/blue.jpg" height="300px">
+                    <span class="card-title">Folder Name</span>
+                </div>
+                <div class="card-content">
+                    <p>This is a temperary folder</p>
+                </div>
+            </div>
+        </a>
+        <a href="">
+            <div class="card">
+                <div class="card-image">
+                    <img src="Images/newfolder.png" height="300px">
+                    <span class="card-title">Create New Folder</span>
+                </div>
+                <div class="card-content">
+                    <p>Click here to make a new folder</p>
+                </div>
+            </div>
+        </a>
+    </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        M.AutoInit();
+    </script>
+    <script src="home.js"></script>
+</body>
+
+</html>

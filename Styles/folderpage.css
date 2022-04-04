@@ -1,0 +1,11 @@
+.table-element:hover {
+    background-color: #dfdfdf;
+}
+
+table {
+    margin-bottom: 25px;
+}
+
+div.input-field {
+    padding: 0;
+}

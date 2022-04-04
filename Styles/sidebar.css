@@ -1,0 +1,28 @@
+.sidenav {
+    transform: translateX(0%) !important;
+}
+
+li.sidenav-object:hover, ul div.collapsible-body i:hover, li.active:hover, li:hover {
+    background-color: #353535;
+}
+
+div.collapsible-header i {
+    padding-left: 15px;
+    font-size: 2em;
+}
+
+div.collapsible-body i {
+    padding-left: 1.5em;
+    font-size: 2em;
+    display: block;
+    margin: 10px 0;
+}
+
+ul.sidenav li span, .collapsible-header span {
+    font-size: 20px;
+}
+
+.collapsible-header span {
+    margin-left:1.5em;
+    font-weight: bold;
+}
