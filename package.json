@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/Jack-Crowley/GoalTracker#readme",
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "morgan": "^1.10.0",
+    "mysql2": "^2.3.3"
   }
 }

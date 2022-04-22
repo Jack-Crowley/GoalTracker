@@ -1,0 +1,136 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.navbar-companyName {
+    font-size: 2em;
+    margin-left: 0.5em;
+    font-family: 'Karla';
+}
+
+.navbar-icon {
+    margin-right: 1em;
+}
+
+.row.footer {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    margin:0;
+    padding:0;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+main {
+flex: 1 0 auto;
+}
+
+div.row {
+    margin-bottom: 0;
+    padding: 0;
+}
+
+footer.page-footer {
+    padding-top: 0.5em;
+    padding-bottom: 1em;
+    padding-left: 1em;
+}
+
+.footer-img {
+    display: inline;
+    margin-right: 3em;
+    padding-right: 3em;
+}
+
+li.footer {
+    display: inline;
+}
+
+.nav-header {
+    margin-right:0;
+}
+
+#nav-mobile.right {
+    margin-right: 0;
+}
+
+ul#nav-mobile {
+    margin:0;
+    padding:0;
+}
+
+.carousel {
+    height: 900px !important;
+}
+
+.carousel-fixed-item {
+    margin-left: 200px;
+}
+
+.carousel-fixed-item {
+    margin: 0;
+}
+
+div.imgwithtext img {
+    width: 100%;
+}
+
+div.imgwithtext {
+    position: relative; 
+}
+
+div.imgwithtext h4 {
+    position: absolute;
+    left: 10%;
+    top: 30%;
+    width: 40%;
+    color: white;
+    font-weight: bold;
+    word-wrap: break-word;
+}
+
+div.imgwithtext h6 {
+    position: absolute;
+    left: 10%;
+    top: 38%;
+    width: 40%;
+    color: white;
+    word-wrap: break-word;
+}
+
+div.imgwithtext a.join-now-button {
+    position: absolute;
+    left: 10%;
+    top: 44%;
+    width: 20%;
+    color: white;
+    word-wrap: break-word;
+    border-radius: 10%;
+}
+
+div.imgwithtext h6.underlined {
+    text-decoration: underline;
+    top: 49%;
+}
+
+.reasons {
+    padding: 100px 100px;
+    margin: 0;
+}
+
+div.information {
+    width: 100%;
+}
+
+i.reasons-icon {
+    padding-top: 2%;
+    font-size: 5em;
+}

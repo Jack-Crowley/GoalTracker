@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-    <link rel="stylesheet" href="Styles/homepage.css" />
-    <link rel="stylesheet" href="Styles/sidebar.css">
+    <link rel="stylesheet" href="/Styles/homepage.css" />
+    <link rel="stylesheet" href="/Styles/sidebar.css">
     <title>Home Page</title>
 </head>
 
@@ -28,15 +28,16 @@
                 <a href="#!" class="white-text"><i class="material-icons white-text small">folder</i><span></span></a>
             </div>
             <div class="collapsible-body grey darken-4">
-                <a href="#!" class="white-text 1"><span><i class="material-icons red-text folder-object1"
+                <a href="/folderpage" class="white-text 1"><span><i class="material-icons red-text folder-object1"
                             style="font-size: 25px; font-weight: bold;">folder</i></span></a>
-                <a href="#!" class="white-text 2"><span><i class="material-icons green-text small folder-object2"
+                <a href="/folderpage" class="white-text 2"><span><i class="material-icons green-text small folder-object2"
                             style="font-size: 25px; font-weight: bold;">folder</i></span></a>
-                <a href="#!" class="white-text 3"><span><i class="material-icons yellow-text small folder-object3"
+                <a href="/folderpage" class="white-text 3"><span><i class="material-icons yellow-text small folder-object3"
                             style="font-size: 25px; font-weight: bold;">folder</i></span></a>
-                <a href="#!" class="white-text 4"><span><i class="material-icons red-text small folder-object4"
+                <a href="/folderpage" class="white-text 4"><span><i class="material-icons red-text small folder-object4"
                             style="font-size: 25px; font-weight: bold;">folder</i></span></a>
-                <a href="#NewFolder" class="white-text 5 modal-trigger"><span><i class="material-icons grey-text small folder-object5"
+                <a href="#NewFolder" class="white-text 5 modal-trigger"><span><i
+                            class="material-icons grey-text small folder-object5"
                             style="font-size: 25px; font-weight: bold;">add</i></span></a>
             </div>
             </li>
@@ -57,10 +58,10 @@
         <div class="col s1"></div>
         <div class="col s10 grey lighten-2 folders col1">
             <h3 class="center">Folders</h3>
-            <a href="folderpage.html">
+            <a href="/folderpage">
                 <div class="card">
                     <div class="card-image">
-                        <img src="Images/red.jpg" height="300px">
+                        <img src="/Images//red.jpg" height="300px">
                         <span class="card-title red-text">Red</span>
                     </div>
                     <div class="card-content">
@@ -68,10 +69,10 @@
                     </div>
                 </div>
             </a>
-            <a href="folderpage.html">
+            <a href="/folderpage">
                 <div class="card">
                     <div class="card-image">
-                        <img src="Images/green.jpg" height="300px">
+                        <img src="/Images/green.jpg" height="300px">
                         <span class="card-title blue-text">BLUE</span>
                     </div>
                     <div class="card-content">
@@ -79,10 +80,10 @@
                     </div>
             </a>
         </div>
-        <a href="folderpage.html">
+        <a href="/folderpage">
             <div class="card">
                 <div class="card-image">
-                    <img src="Images/yellow.jpg" height="300px">
+                    <img src="/Images/yellow.jpg" height="300px">
                     <span class="card-title yellow-text">Yellow</span>
                 </div>
                 <div class="card-content">
@@ -90,10 +91,10 @@
                 </div>
             </div>
         </a>
-        <a href="folderpage.html">
+        <a href="/folderpage">
             <div class="card">
                 <div class="card-image">
-                    <img src="Images/blue.jpg" height="300px">
+                    <img src="/Images/blue.jpg" height="300px">
                     <span class="card-title">Folder Name</span>
                 </div>
                 <div class="card-content">
@@ -104,7 +105,7 @@
         <a href="#NewFolder" class="modal-trigger">
             <div class="card">
                 <div class="card-image">
-                    <img src="Images/newfolder.png" height="300px">
+                    <img src="/Images/newfolder.png" height="300px">
                     <span class="card-title">Create New Folder</span>
                 </div>
                 <div class="card-content">
@@ -126,35 +127,35 @@
                     </div>
                     <div class="file-field input-field s6">
                         <div class="btn blue">
-                          <span>File</span>
-                          <input type="file">
+                            <span>File</span>
+                            <input type="file">
                         </div>
                         <div class="file-path-wrapper">
-                          <input class="file-path validate" type="text" placeholder="Folder Thumbnail">
-                        </div> 
-                      </div>
+                            <input class="file-path validate" type="text" placeholder="Folder Thumbnail">
+                        </div>
+                    </div>
                     <div class="input-field col s12 item-name">
                         <label for="description">Description:</label>
                         <input type="text" name="description" required>
                     </div>
-                <div class="modal-footer">
-                    <button class="btn-small green" type="submit">Save</button>
+                    <div class="modal-footer">
+                        <button class="btn-small green" type="submit">Save</button>
 
-                    <a href="#!" class="modal-close red btn-small">Cancel</a>
-                </div>
+                        <a href="#!" class="modal-close red btn-small">Cancel</a>
+                    </div>
             </form>
         </div>
 
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script>
-        M.AutoInit();
-        $(document).ready(function(){
-            $('.modal').modal();
-        });
-    </script>
-    <script src="Scripts/home.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <script>
+            M.AutoInit();
+            $(document).ready(function () {
+                $('.modal').modal();
+            });
+        </script>
+        <script src="/Scripts/home.js"></script>
 </body>
 
 </html>
