@@ -84,7 +84,8 @@ div.imgwithtext img {
 }
 
 div.imgwithtext {
-    position: relative; 
+    position: relative;
+    display: block;
 }
 
 div.imgwithtext h4 {

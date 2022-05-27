@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="/Styles/folderpage.css">
+    <link rel="stylesheet" href="/Styles/sidebar.css">
+    <title>Goal Tracker</title>
+</head>
+
+<body class="">
+    <% let id = 0 %>
+    <ul id="slide-out" class="sidenav grey darken-4 sidebar-fixed" style="width: 100px">
+        <li class="sidenav-object no-padding expander expand">
+            <a href="#!" class="white-text" style="margin-bottom: 10px"><span></span><i
+                    class="material-icons white-text small">arrow_forward</i></a>
+        </li>
+        <li class="sidenav-object no-padding home">
+            <a href="/home" class="white-text" style="margin-bottom: 10px"><span></span><i
+                    class="material-icons white-text small">home</i></a>
+        </li>
+    </ul>
+    <div class="row header white-text">
+        <div class="col s1 header"></div>
+        <div class="col s10 cyan darken-4 header">
+            <h1 class="center">Folder Page</h1>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col s1"></div>
+    <div class="col s10">
+        <div class="top-tools">
+            <div class="row">
+                <div class="col s5 search-bar">
+                    <input type="text" name="search" placeholder="Search...">
+                </div>
+                <div class="col s3 head">
+                    <a class='dropdown-trigger btn cyan darken-4' href='#' data-target='dropdown1'><p class="dropdown-text">Filter</p><i class="material-icons">dehaze</i></a>
+                </div>
+                <div class="col s1"></div>
+                <div class="col s1"><a href="" class="btn refresh cyan darken-4"><i class="material-icons">refresh</i></a></div>
+                <div class="col s2 head">
+                    <a href="#createNewItem" class="btn modal-trigger cyan darken-4">
+                        <p>New Goal</p> 
+                        <i class="material-icons">add</i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+        <table class="grey darken-2 responsive-table">
+            <tbody>
+                <tr>
+                    <th></th>
+                    <th class="white-text header-for-table"><p class="header-for-table-pelement" style="float: left">Goal Name</p><i class="material-icons active" style="float: right">arrow_downward</i></th>
+                    <th class="white-text header-for-table"><p class="header-for-table-pelement" style="float: left">Category</p><i class="material-icons active" style="float: right">arrow_downward</i></th>
+                    <th class="white-text header-for-table"><p class="header-for-table-pelement" style="float: left">Start Date</p><i class="material-icons active" style="float: right">arrow_downward</i></th>
+                    <th class="white-text header-for-table"><p class="header-for-table-pelement" style="float: left">End Date</p><i class="material-icons active" style="float: right">arrow_downward</i></th>
+                    <th class="white-text header-for-table"><p class="header-for-table-pelement" style="float: left">Description</p><i class="material-icons active" style="float: right">arrow_downward</i></th>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <% for (let i = 0; i < inventory.length; i++) { %>
+                <tr class="table-element">
+                    <td></td>  
+                    <td><%= inventory[i].goal %></td>
+                    <td>
+                        <div class="chip red white-text">
+                            Elective
+                        </div>
+                        <div class="chip blue white-text">
+                            Homework
+                        </div>
+                    </td>
+                    <td class="center"><%= inventory[i].startdate %></td>
+                    <td class="center"><%= inventory[i].enddate %></td>
+                    <td><%= inventory[i].description %></td>
+                    <td>
+                        <a class="btn-small green modal-trigger edit <%= inventory[i].id %>" href="#EditNewItem"><i
+                                class="material-icons right">edit</i>Info/Edit</a>
+                        <a class="btn-small red" href="/folderpage/delete/<%= inventory[i].id %>"><i
+                                class="material-icons right">delete</i>Delete</a>
+                    </td>
+                </tr>
+                <% } %>
+
+            </tbody>
+        </table>
+
+    </div>
+    </div> 
+
+    <div class="modal" id="createNewItem">
+
+        <div class="modal-content">
+
+            <h4 class="center">Create New Goal</h4>
+            <form method="post">
+                <div class="row">
+                    <input type="hidden" name="action" value="create" />
+                    <div class="input-field col s12">
+                        <label for="name">Item Name:</label>
+                        <input class="black-text" type="text" name="name" required>
+                    </div>
+                    <div class="input-field col s12 chips chips-autocomplete"></div>
+                    <div class="input-field col s6">
+                        <label for="startdate">Start Date</label>
+                        <input type="text" name="startdate" placeholder="YYYY-MM-DD" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="enddate">End Date</label>
+                        <input type="text" name="enddate" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="input-field col s12">
+                        <label for="description">Item Description:</label>
+                        <input type="text" name="description" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-small green" type="submit">Submit</button>
+
+                    <a href="#!" class="modal-close red btn-small">Never Mind</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="modal" id="EditNewItem">
+        <div class="modal-content">
+
+            <h4 class="center">Create New Goal</h4>
+            <form method="post">
+                <div class="row">
+                    <input type="hidden" name="action" value="edit" />
+                    <div class="input-field col s12">
+                        <label for="name">Item Name:</label>
+                        <input class="black-text" type="text" name="name" required>
+                    </div>
+                    <div class="input-field col s12 chips chips-autocomplete"></div>
+                    <div class="input-field col s6">
+                        <label for="startdate">Start Date</label>
+                        <input type="text" name="startdate" placeholder="YYYY-MM-DD" required>
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="enddate">End Date</label>
+                        <input type="text" name="enddate" placeholder="YYYY-MM-DD">
+                    </div>
+                    <div class="input-field col s12">
+                        <label for="description">Item Description:</label>
+                        <input type="text" name="description" required>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-small green" type="submit">Submit</button>
+
+                    <a href="#!" class="modal-close red btn-small">Never Mind</a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+        <ul id='dropdown1' class='dropdown-content'>
+            <li class="dropdown-menu 1"><a href="#!">Name</a></li>
+            <li class="dropdown-menu 2"><a href="#!">Description</a></li>
+            <li class="dropdown-menu 3"><a href="#!">Category</a></li>
+            <li class="dropdown-menu 4"><a href="#!">Start Date</a></li>
+            <li class="dropdown-menu 5"><a href="#!">End Date</a></li>
+            <li class="dropdown-menu 6"><a href="#!">All</a></li>
+        </ul>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.modal').modal();
+        });
+        $('.dropdown-trigger').dropdown();
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.datepicker');
+            var instances = M.Datepicker.init(elems, {
+                format: 'yyyy-mm-dd'
+            });
+        });
+    </script>
+    <script src="/Scripts/folderpage.js"></script>
+</body>
+
+</html>

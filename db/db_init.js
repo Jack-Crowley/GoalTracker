@@ -7,12 +7,14 @@ const insert_stuff_table_sql = fs.readFileSync(__dirname + "/queries/init/insert
 const read_stuff_table_sql = fs.readFileSync(__dirname + "/queries/init/read_goals_table.sql", { encoding: "UTF-8" });
 
 
-db.execute(drop_stuff_table_sql);
-
+db.execute(drop_stuff_table_sql, ['goals']);
 db.execute(create_stuff_table_sql);
 
 db.execute(insert_stuff_table_sql, ["Complete HI", '2022-4-26', null, "There is a description"]);
- 
+db.execute(insert_stuff_table_sql, ["Testings", null, null, "There is a description"]);
+db.execute(insert_stuff_table_sql, ["Complete HI", '2022-4-26', null, "There is a description"]);
+db.execute(insert_stuff_table_sql, ["Testings", null, null, "There is a description"]);
+db.execute(insert_stuff_table_sql, ["Complete HI", '2022-4-26', null, "There is a description"]);
 db.execute(insert_stuff_table_sql, ["Testings", null, null, "There is a description"]);
 
 db.execute(read_stuff_table_sql, 

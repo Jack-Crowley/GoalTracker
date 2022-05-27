@@ -30,3 +30,34 @@ $('.chips-autocomplete').chips({
 $(document).ready(function(){
     $('.datepicker').datepicker();
   });
+
+document.querySelectorAll('i.active').forEach((elm) => {
+    elm.classList.toggle('active')
+})
+
+document.querySelectorAll('.header-for-table').forEach((elm) => {
+    elm.addEventListener('click', (event) => {
+        document.querySelectorAll('.header-for-table i').forEach((element) => {
+            if ((element.classList.contains('active'))) {
+                element.classList.toggle('active')
+            }
+        })
+        if ($(event.target).is('th')) {
+            event.target.querySelector('i').classList.toggle('active')
+        }
+        else {
+            event.target.parentElement.querySelector('i').classList.toggle('active')
+        }
+        
+    })
+})
+
+document.querySelectorAll('li.dropdown-menu').forEach((elm) => {
+    elm.addEventListener('click', (event) => {
+        document.querySelector('p.dropdown-text').textContent=elm.textContent
+    })
+})
+
+document.querySelector('a.refresh').addEventListener('click', (elm) => {
+    window.location.reload()
+})

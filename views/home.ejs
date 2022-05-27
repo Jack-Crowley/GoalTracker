@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="/Styles/homepage.css" />
     <link rel="stylesheet" href="/Styles/sidebar.css">
-    <title>Home Page</title>
+    <title>Goal Tracker</title>
 </head>
 
-<body style="margin-left: 100px;" class="grey">
+<body style="margin-left: 100px;" class="grey darken-3">
     <!-- style="width:120px; margin-top:65px;" -->
     <ul id="slide-out" class="sidenav grey darken-4 sidebar-fixed" style="width: 100px">
         <li class="sidenav-object no-padding expander expand">
@@ -52,20 +52,25 @@
     </ul>
     <!-- <a href="#" data-target="slide-out" class="sidenav-trigger left red"><i class="material-icons large">menu</i></a> -->
 
-    <h3 class="center">&ltUser Name&gt's Dashboard </h3>
+    <div class="row header">
+        <div class="col s1 header"></div>
+        <div class="col s10 cyan darken-4 header">
+            <h3 class="center white-text">&ltUser Name&gt's Dashboard </h3>
+        </div>
+    </div>
 
-    <div class="row">
+    <div class="row dashboard">
         <div class="col s1"></div>
-        <div class="col s10 grey lighten-2 folders col1">
-            <h3 class="center">Folders</h3>
+        <div class="col s10 grey darken-4 folders col1">
+            <h3 class="center white-text">Folders</h3>
             <a href="/folderpage">
                 <div class="card">
                     <div class="card-image">
                         <img src="/Images//red.jpg" height="300px">
                         <span class="card-title red-text">Red</span>
                     </div>
-                    <div class="card-content">
-                        <p>My red goals from 2019-2022</p>
+                    <div class="card-content grey darken-3">
+                        <p class="white-text">My red goals from 2019-2022</p>
                     </div>
                 </div>
             </a>
@@ -75,8 +80,8 @@
                         <img src="/Images/green.jpg" height="300px">
                         <span class="card-title blue-text">BLUE</span>
                     </div>
-                    <div class="card-content">
-                        <p>My Colorblind mother made this folder when she snuck onto my account</p>
+                    <div class="card-content grey darken-3">
+                        <p class="white-text">My Colorblind mother made this folder when she snuck onto my account</p>
                     </div>
             </a>
         </div>
@@ -86,8 +91,8 @@
                     <img src="/Images/yellow.jpg" height="300px">
                     <span class="card-title yellow-text">Yellow</span>
                 </div>
-                <div class="card-content">
-                    <p>I love the color yellow</p>
+                <div class="card-content grey darken-3">
+                    <p class="white-text">I love the color yellow</p>
                 </div>
             </div>
         </a>
@@ -97,21 +102,23 @@
                     <img src="/Images/blue.jpg" height="300px">
                     <span class="card-title">Folder Name</span>
                 </div>
-                <div class="card-content">
-                    <p>This is a temperary folder</p>
+                <div class="card-content grey darken-3">
+                    <p class="white-text">This is a temperary folder</p>
                 </div>
             </div>
         </a>
         <a href="#NewFolder" class="modal-trigger">
-            <div class="card">
-                <div class="card-image">
-                    <img src="/Images/newfolder.png" height="300px">
-                    <span class="card-title">Create New Folder</span>
+            <p class="z-depth-5">
+                <div class="card z-depth-5">
+                    <div class="card-image">
+                        <img src="/Images/newfolder.png" height="300px" class="z-depth-5">
+                        <span class="card-title">Create New Folder</span>
+                    </div>
+                    <div class="card-content grey darken-3">
+                        <p class="white-text">Click here to make a new folder</p>
+                    </div>
                 </div>
-                <div class="card-content">
-                    <p>Click here to make a new folder</p>
-                </div>
-            </div>
+            </p>
         </a>
     </div>
     </div>

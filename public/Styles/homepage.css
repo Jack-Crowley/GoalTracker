@@ -1,3 +1,7 @@
+body {
+    margin-top: 20px;
+}
+
 .tooltip {
     margin-right: 100px
 }
@@ -27,4 +31,11 @@ div.folders h1 {
 .card-image span {
     background-color: black;
     border-radius: 50%;
+}
+.card {
+    margin: 1% 2%;
+}
+
+.header {
+    margin: 30px auto;
 }
