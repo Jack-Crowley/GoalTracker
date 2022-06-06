@@ -4,7 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "devstart": "nodemon -e js,ejs,sql,env app.js",
+    "initdb": "node db/db_init.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
     "ejs": "^3.1.7",
     "express": "^4.17.3",
     "morgan": "^1.10.0",
-    "mysql2": "^2.3.3"
+    "mysql2": "^2.3.3",
+    "nodeman": "^1.1.2"
   }
 }
